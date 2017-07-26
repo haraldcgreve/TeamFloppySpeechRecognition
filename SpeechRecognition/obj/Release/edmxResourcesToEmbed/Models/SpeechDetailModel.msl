@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SpeechDetailModelStoreContainer" CdmEntityContainer="SpeechDetailEntities">
+    <EntitySetMapping Name="SpeechDetails">
+      <EntityTypeMapping TypeName="SpeechDetailModel.SpeechDetail">
+        <MappingFragment StoreEntitySet="SpeechDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ConversationText" ColumnName="ConversationText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

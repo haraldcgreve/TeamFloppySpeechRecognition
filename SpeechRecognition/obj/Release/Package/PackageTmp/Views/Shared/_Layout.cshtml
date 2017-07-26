@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Team Floppy</title>
+@*<style>
+			font-face {
+	   		font-family: Macmillan;
+	   		src: url(fonts/macmillan_headline.woff);
+			}
+			body{
+				margin: 0;
+			}
+			/* Border-box-sizing */
+			.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
+			  -webkit-box-sizing: border-box;
+			  -moz-box-sizing: border-box;
+			  box-sizing: border-box;
+			}
+
+			/* Clearfix */
+			.block-group {
+			  *zoom: 1;
+			}
+			.block-group:before, .block-group:after {
+			  display: table;
+			  content: "";
+			  line-height: 0;
+			}
+			.block-group:after {
+			  clear: both;
+			}
+
+			.block-group {
+			  /* ul/li compatibility */
+			  list-style-type: none;
+			  padding: 0;
+			  margin: 0;
+			}
+
+			/* Nested grid */
+			.block-group > .block-group {
+			  clear: none;
+			  float: left;
+			  margin: 0 !important;
+			}
+
+			/* Default block */
+			.block {
+			  float: left;
+			  width: 100%;
+			}
+			.box {
+				font-size: 1em;
+				color: #777;
+				padding: 20px 0;
+			}
+			h1{
+				font-family: Macmillan;
+				color: #00a246;
+				font-size: 65px;
+				margin-top: 0;
+			}
+			.bold{
+				font-weight: bold;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 18px;
+			}
+			.content a{
+				color: #005c46;
+			}
+			.content a:hover, .bold a:active{
+				color: #682c88;
+			}
+
+			a.telephone{
+				text-decoration: none;
+			}
+			p{
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.main-header{
+				background: #00a246;
+				width: 100%;
+				height:80px;
+			}
+			.banner{
+				display: block;
+			}
+
+			.main-header .layout {
+			    max-width: 1000px;
+			    margin-left: auto;
+			    margin-right: auto;
+			    position: relative;
+			}
+
+			.logo {
+			    width: 177px;
+			    margin-top: 9px;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.logo img {
+			    max-width: 167px;
+			}
+			.container{
+				max-width: 100%;
+				padding-top: 40px;
+
+			}
+
+			.layout {
+				max-width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%;
+			}
+			.content .last{
+				padding-bottom: 40px;
+				border-bottom: 2px solid #dad9d3;
+			}
+			.medium{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+
+			}
+			.small{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+			}
+
+			.input-audio {
+				width: 0.1px;
+		    height: 0.1px;
+		    opacity: 0;
+		    overflow: hidden;
+		    position: absolute;
+		    z-index: -1;
+			}
+
+			.input-audio + label span, .input-audio + label strong {
+    		padding: 0.625em 1.25em;
+			}
+
+			.input-audio + label {
+				border: 2px solid #1E824C;
+				background-color: #ffffff;
+		    padding: 0;
+				color: #d3394c;
+				max-width: 80%;
+				font-size: 1.25em;
+				font-weight: 700;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				cursor: pointer;
+				display: inline-block;
+				overflow: hidden;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				-moz--border-radius: 3px;
+			}
+
+			.input-audio + label span {
+		    width: 200px;
+		    display: inline-block;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    vertical-align: top;
+			}
+
+			.input-audio + label strong {
+		    height: 100%;
+		    color: #ffffff;
+		    background-color: #1E824C;
+		    display: inline-block;
+			}
+
+			.input-audio strong {
+				background-color: #d3394c;
+			}
+
+			.save-voice {
+				padding: .5em 2.5em;
+				display: block;
+				background-color: #1E824C;
+				border: 1px solid transparent;
+				color: #ffffff;
+				font-weight: 300;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				-moz--border-radius: 3px;
+				-webkit-transition: all 0.3s ease-in-out;
+				-moz-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				font-size: 1em;
+			}
+
+			.save-voice:hover {
+				background-color: #674172;
+			}
+
+			.email {
+				padding: 1em 2.5em;
+				border: 2px solid #1E824C;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				-moz--border-radius: 3px;
+				font-size: 1em;
+			}
+
+			.submit-voice {
+				padding: 1em 2.5em;
+				display: block;
+				background-color: #1E824C;
+				border: 1px solid transparent;
+				color: #ffffff;
+				font-weight: 300;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				-moz--border-radius: 3px;
+				-webkit-transition: all 0.3s ease-in-out;
+				-moz-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				font-size: 1em;
+			}
+
+		.submit-voice:hover {
+		  background-color: #674172;
+		}
+
+        		.load-texts {
+			padding: 1em 2.5em;
+	    border: 2px solid #1E824C;
+	    -webkit-border-radius: 3px;
+	    border-radius: 3px;
+	    -moz--border-radius: 3px;
+	    font-size: 1em;
+		}
+
+
+			media only screen and (max-width:985px) {
+				.content-banner img{
+					width:100%;
+				}
+				.main-header, .layout{
+					width: 94%;
+					padding-left: 3%;
+					padding-right: 3%;
+				}
+			}
+
+</style>*@
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    <div class="main-header">
+        <header class="banner">
+            <div class="layout">
+                <div class="logo">
+                    <a href="https://www.macmillan.org.uk" target="_blank"><img src="~/images/Macmillan-Cancer-Support.png" alt="Macmillan Cancer Support"></a>
+                </div>
+                <div class="group">
+
+
+                    <nav role="navigation">
+                        <ul>
+
+                            <li class="">
+                                @Html.ActionLink("Store data", "Index", "Home")
+                            </li>
+                            <li class="">
+                                @Html.ActionLink("Load data", "Load", "Home")
+                            </li>
+                            
+                        </ul>
+                    </nav>
+
+
+                    
+
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container body-content">
+        @*<img src="C:\Users\hgreve\Downloads\giphy-downsized.gif"/>*@
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="layout">
+                    <div class="footer-logo">
+                        <a href="https://www.macmillan.org.uk" target="_blank"><img src="~/images/Macmillan-Cancer-Support-green.png" alt="Macmillan Cancer Support"></a>
+                    </div>
+                    <div class="footer-information">
+                        <p class="medium">© Macmillan Cancer Support 2017</p>
+                        <p class="small">
+                            Macmillan Cancer Support, registered charity in England and Wales (261017), Scotland (SC039907) and the Isle of Man (604). A company limited
+                            by guarantee, registered in England and Wales company number 2400969. Isle of Man company number 4694F. Registered office: 89 Albert
+                            Embankment, London SE1 7UQ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="~/js/main.js"></script>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

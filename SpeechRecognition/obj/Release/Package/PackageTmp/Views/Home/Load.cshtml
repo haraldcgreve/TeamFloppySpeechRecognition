@@ -1,0 +1,26 @@
+﻿@model SpeechRecognition.Models.SpeechDetail
+
+@{
+    ViewBag.Title = "Load";
+}
+<div class="container">
+    <div class="layout">
+        <div class="content-banner">
+            <h1>Load Data</h1>
+        </div>
+        <div class="content box">
+            @using (Html.BeginForm("Load", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="block-group box">
+                    @Html.TextBoxFor(x => x.Email, new { @class = "email", name = "email", pattern = "[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}", required = "true", placeholder = "Enter your Email" })
+                </div>
+                <div class="block-group box">
+                    <input type="submit" name="load" class="submit-voice" id="load" value="Load" />
+                </div>
+            }
+
+            @Html.TextAreaFor(x => x.ConversationText, new { rows = "10", cols = "50", @class = "load-texts" })
+
+        </div>
+    </div>
+</div>
